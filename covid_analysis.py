@@ -74,7 +74,7 @@ difference = st.container()
 
 with header:
     st.title('Analizador de la evolución de COVID-19')
-    st.caption('Source code [Covid Evolution Analyzer](https://www.linkedin.com/in/tim-denzler/)')
+    st.caption('Source code [Covid Evolution Analyzer](https://github.com/DiaZa13/covid-analyzer)')
     # description of the analyzer and COVID-19
     st.markdown(
         'Los últimos dos años han generado un gran impacto en la vida de los seres humanos, esto a causa del COVID-19 y todas y todas las acciones tomadas'
