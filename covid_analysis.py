@@ -100,9 +100,9 @@ with dataset:
     # get the countries
     countries = covid_data.country.unique()
     last_report = get_last_report(covid_data)
-    confirmed, deaths = total_cases(last_report)
+    confirmed = deaths = total_cases(last_report)
     recovered = covid_data['new_recovered'].sum()
-
+    st.dataframe(last_report)
     '''
     ### Estadísticas generales
     '''
