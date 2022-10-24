@@ -49,6 +49,7 @@ def get_line_chart(data, x_axis, y_axis, x_label, y_label, hue):
                 )
     return (lines + points + tooltips).interactive()
 
+
 def user_params(data: [str], select_label: str, multiselect: bool, radio_key: str, country_key: str,
                 labels=['Día', 'Mes', 'Año']):
     ms, col1, me = st.columns((.1, 2, .5))
@@ -64,7 +65,6 @@ def user_params(data: [str], select_label: str, multiselect: bool, radio_key: st
 
 # page configuration
 st.set_page_config(page_title='Casos De Covid-19', page_icon='random', layout='wide')
-
 
 header = st.container()
 dataset = st.container()
@@ -139,7 +139,7 @@ with dataset:
     ### Casos infectados reportados a la fecha
     Se muestra una gráfica que permite visualizar los casos infectados `(confirmados - (fallecidos + recuperados))` de cada uno de los países reportados hasta la fecha
     '''
-    st.bar_chart(data=last_report, x='country', y=['infected_cases'])
+    st.bar_chart(data=last_report, x='country', y='infected_cases')
 
 with evolution:
     st.header("Evolución de los casos reportados ")
