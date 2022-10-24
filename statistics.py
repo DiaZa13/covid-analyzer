@@ -4,7 +4,7 @@ import streamlit as st
 
 def get_last_report(data):
     # Based on: https://www.geeksforgeeks.org/get-yesterdays-date-using-python/
-    yesterday = date.today() - timedelta(days=1)
+    yesterday = date.today() - timedelta(days=2)
     # get last report
     return data.loc[data['date'].dt.date == yesterday]
 
