@@ -2,7 +2,6 @@ from datetime import date, timedelta
 import streamlit as st
 
 
-@st.experimental_memo
 def get_last_report(data):
     # Based on: https://www.geeksforgeeks.org/get-yesterdays-date-using-python/
     yesterday = date.today() - timedelta(days=1)

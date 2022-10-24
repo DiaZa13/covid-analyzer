@@ -139,6 +139,7 @@ with dataset:
     ### Casos infectados reportados a la fecha
     Se muestra una gráfica que permite visualizar los casos infectados `(confirmados - (fallecidos + recuperados))` de cada uno de los países reportados hasta la fecha
     '''
+    st.altair_chart
     st.bar_chart(data=last_report, x='country', y='infected_cases')
 
 with evolution:
