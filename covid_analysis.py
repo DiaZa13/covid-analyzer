@@ -170,13 +170,11 @@ with compare:
         " se utiliza la normalización de los casos reportados por millón de habitantes. Para poder observar alguna gráfica debe de primero seleccionar al menos"
         " un país.")
     comp_country, comp_time = user_params(countries, 'Seleccione los países que desea comparar', True, 'comp_radio',
-                                          'comp_country')
+                                          'comp_country', labels=['Mes', 'Año'])
     comp_confirmed, comp_deaths = st.tabs(['🧾️ Confirmados', '☠️Fallecidos'])
 
     evolution = compare_countries(covid_data, comp_country, comp_time)
-    if comp_time == 'Día':
-        time = 'date'
-    elif comp_time == 'Mes':
+    if comp_time == 'Mes':
         time = 'month'
     else:
         time = 'period'
